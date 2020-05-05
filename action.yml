@@ -18,7 +18,6 @@ inputs:
   template_filename:
     description: "The template to render."
     required: false
-    default: null
 
 runs:
   using: "docker"
