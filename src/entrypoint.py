@@ -39,7 +39,7 @@ def main() -> int:
     # Get inputs from the environment
     github_workspace_dir: Optional[str] = os.environ.get("GITHUB_WORKSPACE")
     read_filename: Optional[str] = os.environ.get("INPUT_READ_FILENAME", "apb.json")
-    write_filename: Optional[str] = os.environ.get("INPUT_WRITE_FILENAME", "abp.md")
+    write_filename: Optional[str] = os.environ.get("INPUT_WRITE_FILENAME", "apb.md")
     template_filename: Optional[str] = os.environ.get("INPUT_TEMPLATE_FILENAME")
 
     # sanity checks
