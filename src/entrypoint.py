@@ -61,22 +61,33 @@ def main() -> int:
         )
         return -1
 
-    with Path(read_filename).open() as f:
+    # Read json data created by apb action
+    logging.info(f"Loading json data from: {read_filename}")
+    with (Path(github_workspace_dir) / Path(read_filename)).open() as f:
         data = json.load(f)
 
-    # make data mustache-friendly
+    # Make data mustache-friendly
     flat_repos: list = list()
     for k, v in data["repositories"].items():
         v["repository"] = k
         flat_repos.append(v)
     data["repositories"] = flat_repos
 
+    # Render the internal or external template
     if template_filename is not None:
-        with Path(template_filename).open() as f:
+        logging.info(f"Loading template file: {template_filename}")
+        with (Path(github_workspace_dir) / Path(template_filename)).open() as f:
             template_data: str = f.read()
-            print(pystache.render(template_data, data))
+            logging.info("Rendering template from external file.")
+            rendered = pystache.render(template_data, data)
     else:
-        print(pystache.render(TEMPLATE, data))
+        logging.info("Rendering default template.")
+        rendered = pystache.render(TEMPLATE, data)
+
+    # Write rendered data out to file
+    logging.info(f"Writing rendered data to: {write_filename}")
+    with (Path(github_workspace_dir) / Path(write_filename)).open("w") as f:
+        f.write(rendered)
 
     return 0
 
