@@ -1,10 +1,10 @@
-# action-apb #
+# action-apb-dashboard #
 
-[![GitHub Build Status](https://github.com/cisagov/action-apb/workflows/build/badge.svg)](https://github.com/cisagov/action-apb/actions)
-[![Coverage Status](https://coveralls.io/repos/github/cisagov/action-apb/badge.svg?branch=develop)](https://coveralls.io/github/cisagov/action-apb?branch=develop)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/action-apb.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/action-apb/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/action-apb.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/action-apb/context:python)
-[![Known Vulnerabilities](https://snyk.io/test/github/cisagov/action-apb/develop/badge.svg)](https://snyk.io/test/github/cisagov/action-apb)
+[![GitHub Build Status](https://github.com/cisagov/action-apb-dashboard/workflows/build/badge.svg)](https://github.com/cisagov/action-apb-dashboard/actions)
+[![Coverage Status](https://coveralls.io/repos/github/cisagov/action-apb-dashboard/badge.svg?branch=develop)](https://coveralls.io/github/cisagov/action-apb-dashboard?branch=develop)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/action-apb-dashboard.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/action-apb-dashboard/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/action-apb-dashboard.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/action-apb-dashboard/context:python)
+[![Known Vulnerabilities](https://snyk.io/test/github/cisagov/action-apb-dashboard/develop/badge.svg)](https://snyk.io/test/github/cisagov/action-apb-dashboard)
 
 This is a generic skeleton project that can be used to quickly get a
 new [cisagov](https://github.com/cisagov) Python library GitHub

@@ -1,5 +1,5 @@
 """
-This is the setup module for the action-apb-dasboard project.
+This is the setup module for the action-apb-dashboard project.
 
 Based on:
 
@@ -40,7 +40,7 @@ setup(
     # NCATS "homepage"
     url="https://www.us-cert.gov/resources/ncats",
     # The project's main homepage
-    download_url="https://github.com/cisagov/action-apb",
+    download_url="https://github.com/cisagov/action-apb-dashboard",
     # Author details
     author="Cyber and Infrastructure Security Agency",
     author_email="ncats@hq.dhs.gov",
