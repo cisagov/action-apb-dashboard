@@ -1,36 +1,24 @@
 ---
 author: "Cyber and Infrastructure Security Agency"
 branding:
-  icon: "clock"
+  icon: "list"
   color: "purple"
-description: "Sends rebuild events to any projects that haven't been built
-              recently."
-name: "All Projects Builder"
+description: "Render the json output of apb into markdown."
+name: "All Projects Builder Dashboard"
 
 inputs:
-  repo-query:
-    description: "GitHub search query used to find repositories for rebuild.
-      See: https://developer.github.com/v3/search/#constructing-a-search-query"
-    required: true
-  access_token:
-    description: "GitHub personal access token."
-    required: true
-  workflow_id:
-    description: "The workflow to monitor."
+  read-filename:
+    description: "The input file to read the apb json."
     required: false
-    default: "build.yml"
-  build_age:
-    description: "Repository build age to trigger rebuilds."
+    default: "apb.json"
+  write-filename:
+    description: "The output file in which to write dashboard markdown."
     required: false
-    default: "7d"
-  event_type:
-    description: "repository_dispatch event type to send."
+    default: "apb.md"
+  template_filename:
+    description: "The template to render."
     required: false
-    default: "apb"
-  max_rebuilds:
-    description: "Limit the number of rebuilds that will be triggered."
-    required: false
-    default: 10
+    default: null
 
 runs:
   using: "docker"
