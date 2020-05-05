@@ -74,7 +74,7 @@ def main() -> int:
     data["repositories"] = flat_repos
 
     # Render the internal or external template
-    if template_filename is not None:
+    if template_filename:
         logging.info(f"Loading template file: {template_filename}")
         with (Path(github_workspace_dir) / Path(template_filename)).open() as f:
             template_data: str = f.read()
