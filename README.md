@@ -6,13 +6,15 @@
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/action-apb-dashboard.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/action-apb-dashboard/context:python)
 [![Known Vulnerabilities](https://snyk.io/test/github/cisagov/action-apb-dashboard/develop/badge.svg)](https://snyk.io/test/github/cisagov/action-apb-dashboard)
 
-This is a generic skeleton project that can be used to quickly get a
-new [cisagov](https://github.com/cisagov) Python library GitHub
-project started.  This skeleton project contains [licensing
-information](LICENSE), as well as
-[pre-commit hooks](https://pre-commit.com) and
-[GitHub Actions](https://github.com/features/actions) configurations
-appropriate for a Python library project.
+This is a [GitHub Action](https://github.com/features/actions) that creates
+a Markdown file containing the [APB](https://github.com/cisagov/action-apb)
+status of repositories.
+
+For an example of how to call this action, see the
+[`rebuild_org` workflow for `action-apb`](https://github.com/cisagov/action-apb/blob/develop/.github/workflows/rebuild_org.yml).
+
+For an example of output from this action, see the
+[`action-apb` Wiki](https://github.com/cisagov/action-apb/wiki).
 
 ## Contributing ##
 
