@@ -8,10 +8,10 @@ import os
 import pytest
 
 # cisagov Libraries
-import _version
+import apb_dashboard
 
 # define sources of version strings
-PROJECT_VERSION = _version.__version__
+PROJECT_VERSION = apb_dashboard.__version__
 RELEASE_TAG = os.getenv("RELEASE_TAG")
 
 
