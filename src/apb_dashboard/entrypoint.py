@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """GitHub Action to rebuild respositories that haven't be built in a while."""
 
 # Standard Python Libraries
@@ -6,7 +5,6 @@ import json
 import logging
 import os
 from pathlib import Path
-import sys
 from typing import Optional
 
 # Third-Party Libraries
@@ -90,7 +88,3 @@ def main() -> int:
         f.write(rendered)
 
     return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

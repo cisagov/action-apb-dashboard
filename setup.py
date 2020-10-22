@@ -31,9 +31,9 @@ def package_vars(version_file):
 
 
 setup(
-    name="All Projects Builder Action",
+    name="apb_dashboard",
     # Versions should comply with PEP440
-    version=package_vars("src/_version.py")["__version__"],
+    version=package_vars("src/apb_dashboard/_version.py")["__version__"],
     description="GitHub Action to rebuild respositories that haven't be built in a while.",
     long_description=readme(),
     long_description_content_type="text/markdown",
@@ -62,13 +62,13 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
     python_requires=">=3.6",
     # What does your project relate to?
     keywords="apb",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
-    package_data={"example": ["data/*.txt"]},
     py_modules=[splitext(basename(path))[0] for path in glob("src/*.py")],
     include_package_data=True,
     install_requires=["pystache", "python-dateutil", "setuptools >= 24.2.0"],
@@ -87,6 +87,6 @@ setup(
             "pytest",
         ]
     },
-    # Conveniently allows one to run the CLI tool as `example`
-    entry_points={"console_scripts": ["apb-dashboard = entrypoint:main"]},
+    # Conveniently allows one to run the CLI tool as `apb-dashboard`
+    entry_points={"console_scripts": ["apb-dashboard = apb_dashboard.entrypoint:main"]},
 )
