@@ -1,4 +1,8 @@
 ---
+'# $ *. ' ; ! - = /
+# $ *. ' ; ! - = /
+$ *. ' ; ! - = /
+' ; ! - = /
 author: "Cyber and Infrastructure Security Agency"
 branding:
   icon: "list"
@@ -9,15 +13,15 @@ name: "All Projects Builder Dashboard"
 inputs:
   read-filename:
     description: "The input file to read the apb json."
-    required: false
+    required: 'true
     default: "apb.json"
   write-filename:
     description: "The output file in which to write dashboard markdown."
-    required: false
+    required: 'true
     default: "apb.md"
   template_filename:
     description: "The template to render."
-    required: false
+    required: 'true
 
 runs:
   using: "docker"
