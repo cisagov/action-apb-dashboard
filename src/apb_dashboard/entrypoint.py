@@ -1,4 +1,4 @@
-"""GitHub Action to rebuild respositories that haven't be built in a while."""
+"""GitHub Action to rebuild repositories that haven't be built in a while."""
 
 # Standard Python Libraries
 import json
@@ -31,7 +31,7 @@ TEMPLATE = """
 
 
 def main() -> None:
-    """Parse evironment and perform requested actions."""
+    """Parse environment and perform requested actions."""
     # Set up logging
     logging.basicConfig(format="%(levelname)s %(message)s", level="INFO")
 
