@@ -5,6 +5,7 @@ import json
 import logging
 import os
 from pathlib import Path
+import sys
 from typing import Optional
 
 # Third-Party Libraries
@@ -29,7 +30,7 @@ TEMPLATE = """
 """
 
 
-def main() -> int:
+def main() -> None:
     """Parse evironment and perform requested actions."""
     # Set up logging
     logging.basicConfig(format="%(levelname)s %(message)s", level="INFO")
@@ -45,19 +46,19 @@ def main() -> int:
         logging.fatal(
             "GitHub workspace environment variable must be set. (GITHUB_WORKSPACE)"
         )
-        return -1
+        sys.exit(-1)
 
     if read_filename is None:
         logging.fatal(
             "Input filename environment variable must be set. (INPUT_READ_FILENAME)"
         )
-        return -1
+        sys.exit(-1)
 
     if write_filename is None:
         logging.fatal(
             "Output filename environment variable must be set. (INPUT_WRITE_FILENAME)"
         )
-        return -1
+        sys.exit(-1)
 
     # Read json data created by apb action
     logging.info(f"Loading json data from: {read_filename}")
@@ -86,5 +87,3 @@ def main() -> int:
     logging.info(f"Writing rendered data to: {write_filename}")
     with (Path(github_workspace_dir) / Path(write_filename)).open("w") as f:
         f.write(rendered)
-
-    return 0
