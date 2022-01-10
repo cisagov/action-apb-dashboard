@@ -17,5 +17,6 @@ LABEL org.opencontainers.image.vendor="Cybersecurity and Infrastructure Security
 LABEL org.opencontainers.image.version=${VERSION}
 
 COPY . ./
-RUN pip install --requirement requirements.txt
+RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel
+RUN pip install --no-cache-dir --requirement requirements.txt
 ENTRYPOINT ["python3", "-m", "apb_dashboard"]
