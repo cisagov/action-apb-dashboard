@@ -61,7 +61,7 @@ def main() -> None:
         sys.exit(-1)
 
     # Read json data created by apb action
-    logging.info(f"Loading json data from: {read_filename}")
+    logging.info("Loading json data from: %s", read_filename)
     with (Path(github_workspace_dir) / Path(read_filename)).open() as f:
         data = json.load(f)
 
@@ -74,7 +74,7 @@ def main() -> None:
 
     # Render the internal or external template
     if template_filename:
-        logging.info(f"Loading template file: {template_filename}")
+        logging.info("Loading template file: %s", template_filename)
         with (Path(github_workspace_dir) / Path(template_filename)).open() as f:
             template_data: str = f.read()
             logging.info("Rendering template from external file.")
@@ -84,6 +84,6 @@ def main() -> None:
         rendered = pystache.render(TEMPLATE, data)
 
     # Write rendered data out to file
-    logging.info(f"Writing rendered data to: {write_filename}")
+    logging.info("Writing rendered data to: %s", write_filename)
     with (Path(github_workspace_dir) / Path(write_filename)).open("w") as f:
         f.write(rendered)
