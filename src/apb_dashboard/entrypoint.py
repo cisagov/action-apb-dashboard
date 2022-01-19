@@ -9,7 +9,7 @@ import sys
 from typing import Optional
 
 # Third-Party Libraries
-import pystache
+import chevron
 
 TEMPLATE = """
 # APB Status
@@ -78,10 +78,10 @@ def main() -> None:
         with (Path(github_workspace_dir) / Path(template_filename)).open() as f:
             template_data: str = f.read()
             logging.info("Rendering template from external file.")
-            rendered = pystache.render(template_data, data)
+            rendered = chevron.render(template_data, data)
     else:
         logging.info("Rendering default template.")
-        rendered = pystache.render(TEMPLATE, data)
+        rendered = chevron.render(TEMPLATE, data)
 
     # Write rendered data out to file
     logging.info("Writing rendered data to: %s", write_filename)
