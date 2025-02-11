@@ -98,7 +98,9 @@ setup(
         # field of the mypy pre-commit hook to avoid discrepancies in type
         # checking between environments.
         "dev": [
+            "types-chevron",
             "types-docopt",
+            "types-python-dateutil",
             "types-setuptools",
         ],
         "test": [
