@@ -1,4 +1,3 @@
-#!/usr/bin/env pytest -vs
 """Tests for abp action."""
 
 # Standard Python Libraries
