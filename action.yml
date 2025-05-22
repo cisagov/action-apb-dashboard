@@ -1,24 +1,24 @@
 ---
-author: "Cyber and Infrastructure Security Agency"
+author: Cyber and Infrastructure Security Agency
 branding:
-  icon: "list"
-  color: "purple"
-description: "Render the json output of apb into markdown."
-name: "All Projects Builder Dashboard"
+  icon: list
+  color: purple
+description: Render the json output of apb into markdown.
+name: All Projects Builder Dashboard
 
 inputs:
   read-filename:
-    description: "The input file to read the apb json."
+    description: The input file to read the apb json.
     required: false
-    default: "apb.json"
+    default: apb.json
   write-filename:
-    description: "The output file in which to write dashboard markdown."
+    description: The output file in which to write dashboard markdown.
     required: false
-    default: "apb.md"
+    default: apb.md
   template_filename:
-    description: "The template to render."
+    description: The template to render.
     required: false
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: docker
+  image: Dockerfile
