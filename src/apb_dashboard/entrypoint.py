@@ -22,7 +22,7 @@ TEMPLATE = """
 |------------|--------------|-----------|------------|
 {{#repositories}}
 | {{repository}} \
-| {{#workflow}}[![GitHub Build Status](https://github.com/{{repository}}/workflows/build/badge.svg)](https://github.com/{{repository}}/actions){{/workflow}} \
+| {{#workflow}}[![GitHub Build Status](https://github.com/{{repository}}/actions/workflows/build.yml/badge.svg)](https://github.com/{{repository}}/actions){{/workflow}} \
 {{^workflow}}No workflow{{/workflow}} \
 | {{run_age}} \
 | {{event_sent}} |
