@@ -36,7 +36,7 @@ dependencies = [
     "chevron",
     "python-dateutil",
 ]
-description = "GitHub Action to rebuild repositories that haven't been built in a while."
+description = "GitHub Action to create a Markdown file containing the APB status of repositories"
 dynamic = ["readme", "version"]
 keywords = ["apb"]
 license = "CC0-1.0"
