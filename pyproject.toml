@@ -52,7 +52,6 @@ requires-python = ">=3.10"
 # checking between environments.
 dev = [
     "types-chevron",
-    "types-docopt",
     "types-python-dateutil",
 ]
 test = [
