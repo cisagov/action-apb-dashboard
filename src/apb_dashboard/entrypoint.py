@@ -6,7 +6,6 @@ import logging
 import os
 from pathlib import Path
 import sys
-from typing import Optional
 
 # Third-Party Libraries
 import chevron
@@ -36,10 +35,10 @@ def main() -> None:
     logging.basicConfig(format="%(levelname)s %(message)s", level="INFO")
 
     # Get inputs from the environment
-    github_workspace_dir: Optional[str] = os.environ.get("GITHUB_WORKSPACE")
-    read_filename: Optional[str] = os.environ.get("INPUT_READ_FILENAME", "apb.json")
-    write_filename: Optional[str] = os.environ.get("INPUT_WRITE_FILENAME", "apb.md")
-    template_filename: Optional[str] = os.environ.get("INPUT_TEMPLATE_FILENAME")
+    github_workspace_dir: str | None = os.environ.get("GITHUB_WORKSPACE")
+    read_filename: str | None = os.environ.get("INPUT_READ_FILENAME", "apb.json")
+    write_filename: str | None = os.environ.get("INPUT_WRITE_FILENAME", "apb.md")
+    template_filename: str | None = os.environ.get("INPUT_TEMPLATE_FILENAME")
 
     # sanity checks
     if github_workspace_dir is None:
