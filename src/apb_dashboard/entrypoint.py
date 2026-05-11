@@ -1,4 +1,4 @@
-"""GitHub Action to rebuild repositories that haven't be built in a while."""
+"""GitHub Action to rebuild repositories that haven't been built in a while."""
 
 # Standard Python Libraries
 import json
