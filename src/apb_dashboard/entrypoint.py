@@ -67,7 +67,7 @@ def main() -> None:
         data = json.load(f)
 
     # Make data mustache-friendly
-    flat_repos: list = list()
+    flat_repos: list = []
     for k, v in data["repositories"].items():
         v["repository"] = k
         flat_repos.append(v)
