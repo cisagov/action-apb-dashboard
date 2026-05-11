@@ -10,6 +10,8 @@ import sys
 # Third-Party Libraries
 import chevron
 
+# Note that this template has one very long line.  Unfortunately there
+# is no way to shorten this line; hence, the noqa comment.
 TEMPLATE = """
 # APB Status
 
@@ -26,7 +28,7 @@ TEMPLATE = """
 | {{run_age}} \
 | {{event_sent}} |
 {{/repositories}}
-"""
+"""  # noqa: B950
 
 
 def main() -> None:
