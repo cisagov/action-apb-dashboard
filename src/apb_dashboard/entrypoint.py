@@ -1,4 +1,4 @@
-"""GitHub Action to rebuild repositories that haven't be built in a while."""
+"""GitHub Action to rebuild repositories that haven't been built in a while."""
 
 # Standard Python Libraries
 import json
@@ -10,6 +10,8 @@ import sys
 # Third-Party Libraries
 import chevron
 
+# Note that this template has one very long line.  Unfortunately there
+# is no way to shorten this line; hence, the noqa comment.
 TEMPLATE = """
 # APB Status
 
@@ -26,7 +28,7 @@ TEMPLATE = """
 | {{run_age}} \
 | {{event_sent}} |
 {{/repositories}}
-"""
+"""  # noqa: B950
 
 
 def main() -> None:
@@ -65,7 +67,7 @@ def main() -> None:
         data = json.load(f)
 
     # Make data mustache-friendly
-    flat_repos: list = list()
+    flat_repos: list = []
     for k, v in data["repositories"].items():
         v["repository"] = k
         flat_repos.append(v)
